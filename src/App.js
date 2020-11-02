@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 
+import './App.css';
+
+import backgound from './assets/background.jpeg';
+
 import Header from './components/Header';
 
 function App() {
@@ -19,12 +23,12 @@ function App() {
         </ul>
       </Header>
       <Header title="Projects">
+      <img width={300} src={backgound} alt=""/>
         <ul>
           { projects.map(project => <li key={project}>{project}</li>) }
         </ul>
         <button type="button" onClick={handleAddProject}>Add new project</button>
       </Header>
-
     </>
   );
 }
